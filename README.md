@@ -22,12 +22,9 @@ You will need access to your own AWS account.  AWS has some free offerings that 
 
 Description of the first section what we are going to try and do.
 
-**✅ Step 1a: Download Terraform.** 
-Navigate to https://www.terraform.io/downloads.html and download the distrabution that matches the computer you are working with. 
+**✅ Step 1a: Terraform Setup.** 
 
-**✅ Step 1b: Install Terraform.** 
-In Linux we can simply add the hashicorp repositories so we can use our package manager to do the installation for us.  
-Offical docs can be found [here](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
+In Linux we can simply add the hashicorp repositories so we can use our package manager to do the installation for us.  Offical docs can be found [here](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
 
 ```bash 
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -40,30 +37,61 @@ Now that we have added the correct repo we can run the installation.
 sudo apt-get update && sudo apt-get install terraform
 ```
 
+To verify the installation we can run the following command
+
+```bash 
+terraform -help
+```
 
 
-**✅ Step 1a: Ansible setup.** 
+**✅ Step 1b: Ansible setup.** 
 
-**✅ Step 1a: AWS setup.** 
-
-
+If you are running on a Ubuntu box you can run the following commands to install Ansible. The offical docs can be found [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#prerequisites-installing-pip).
 
 ```bash
-Command to run
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
 ```
+
+
+
+**✅ Step 1c: AWS setup.** 
+
+Lastly we will install and configure the AWS CLI
+
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```
+
+Once we have the CLI we will need to setup a number of values to allow us to access our AWS account from the tools.  We will use the configure command to start this process
+
+```bash
+aws configure
+```
+
+## 2. Part 2
+
+**✅ Step 2a: First deployment** 
+
+```bash 
+terraform apply
+```
+
+
+
+## 3. Resources
+For further reading and labs go to 
+[link name](URL) 
+
 
 *📃output*
 ```bash
 Output from the above command     
 ```
+
 Screenshot of the above working
 <img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
-
-## 2. Part 2
-
-**✅ Step 2a: The first step in the section.**
-**✅ Step 2b: Second step in the section**
-
-## 3. Resources
-For further reading and labs go to 
-[link name](URL) 
