@@ -44,7 +44,7 @@ variable "ssh_private_key" {
 variable "ssh_public_key" {
   description = "SSH public key to be use when creating the instances."
   type        = string
-  default = "~/.ssh/id_rsa.pub"
+  default = "./id_rsa.pub"
 }
 
 # Mayastor node vars
