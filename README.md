@@ -56,7 +56,6 @@ sudo apt install ansible
 ```
 
 
-
 **✅ Step 1c: AWS setup.** 
 
 Lastly we will install and configure the AWS CLI
@@ -73,9 +72,24 @@ Once we have the CLI we will need to setup a number of values to allow us to acc
 aws configure
 ```
 
+Lasly we will need to go into the AWS market place and accept the license agreement for the image we will be using.  To do that we will need to navigate [here](https://aws.amazon.com/marketplace/pp?sku=47k9ia2igxpcce2bzo8u3kj03).
+
+
+**✅ Step 1d: ssh key setup.** 
+
+```bash
+ssh-keygen -t rsa -f ./id_rsa
+```
+
 ## 2. Part 2
 
 **✅ Step 2a: First deployment** 
+
+
+
+```bash 
+terraform init
+```
 
 ```bash 
 terraform apply
