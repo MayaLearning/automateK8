@@ -38,7 +38,7 @@ variable "ssh_user" {
 variable "ssh_private_key" {
   description = "The private key to use when connecting to the instances."
   type        = string
-  default = "~/.ssh/id_rsa"
+  default = "./id_rsa"
 }
 
 variable "ssh_public_key" {
