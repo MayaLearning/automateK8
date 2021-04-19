@@ -24,8 +24,8 @@ variable "image" {
     user   = string
   })
   default = {
-    ami_id = "ami-0d6e9a57f6259ba3a"
-    user   = "centos"
+    ami_id = "ami-042e8287309f5df03"
+    user   = "ubuntu"
   }
 }
 #ssh connection vars
@@ -58,7 +58,7 @@ variable "storage_nodes" {
   })
   default = {
     count = 3
-    type = "i3.2xlarge"
+    type = "m5.xlarge"
     os_disk_size = 40
     msp = "/dev/nvme0n1"
   }
@@ -74,7 +74,7 @@ variable "master_nodes" {
   })
   default = {
     count = 1
-    type = "m5.2xlarge"
+    type = "m5.xlarge"
     os_disk_size = 50
   }
 }
@@ -89,7 +89,7 @@ variable "worker_nodes" {
   })
   default = {
     count = 3
-    type = "c5.2xlarge"
+    type = "m5.xlarge"
     os_disk_size = 40
   }
 }
