@@ -83,9 +83,12 @@ ssh-keygen -t rsa -f ./id_rsa
 
 ## 2. Part 2
 
-**✅ Step 2a: First deployment** 
+**✅ Step 2a: Look in the output.tf** 
+
+Notice the Asnsible jobs triggering with the values from that are output from the Terraform job.  This is the "hook" we will use to configure everything on our deployment. 
 
 
+**✅ Step 2b: First deployment** 
 
 ```bash 
 terraform init
@@ -94,8 +97,6 @@ terraform init
 ```bash 
 terraform apply
 ```
-
-
 
 ## 3. Resources
 For further reading and labs go to 
