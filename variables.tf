@@ -12,7 +12,7 @@ variable "location" {
 
 variable "k8s_installer" {
   type = string
-  default = "None"
+  default = "kubespray"
 }
 
 # Centos AMIs per AZ: https://wiki.centos.org/Cloud/AWS
