@@ -1,6 +1,6 @@
 ### The Ansible inventory file
 resource "local_file" "AnsibleInventory" {
-  content = templatefile("../inventory.tmpl",
+  content = templatefile("./inventory.tmpl",
   {
     setup_name = var.setup_name
     bastion-ip = aws_instance.master_node.0.public_ip
@@ -16,7 +16,7 @@ resource "local_file" "AnsibleInventory" {
 }
 
 resource "local_file" "ssh_conf" {
-  content = templatefile("../ssh.tmpl",
+  content = templatefile("./ssh.tmpl",
   {
     setup_name = var.setup_name
     bastion-ip = aws_instance.master_node.0.public_ip
