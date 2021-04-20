@@ -10,9 +10,9 @@ You will need access to your own AWS account.  AWS has some free offerings that 
 
 | Title  | Description
 |---|---|
-| **1 - Installation and configuration** | [Instructions](#Installation-and-configuration)  |
-| **2 - Running the scripts** | [Instructions](#Running-the-scripts)  |
-| **3 - Resources** | [Instructions](#Resources)  |
+| **1 - Installation and configuration** | [Instructions](#1-Installation-and-configuration)  |
+| **2 - Running the scripts** | [Instructions](#2-Running-the-scripts)  |
+| **3 - Resources** | [Instructions](#3-Resources)  |
 
 ## 1. Installation and configuration
 
