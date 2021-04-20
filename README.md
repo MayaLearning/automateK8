@@ -58,6 +58,12 @@ sudo apt install ansible
 
 **✅ Step 1c: AWS setup.** 
 
+For this next step we will need to install unzip
+
+```bash
+sudo apt install unzip
+```
+
 Lastly we will install and configure the AWS CLI
 
 ```bash
