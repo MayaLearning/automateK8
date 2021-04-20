@@ -1,6 +1,5 @@
 # How to Automate Your Kubernetes Deployment
 
-##  DESCRIPTION HERE
 In this session we will use Terraform and Ansible to setup a Kubernetes cluster in the cloud.  This is an intesnive hands on session for people who want to learn these technologies.
 
 ## Before starting
