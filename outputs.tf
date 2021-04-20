@@ -28,3 +28,7 @@ resource "local_file" "ssh_conf" {
   })
   filename = "ssh.cfg"
 }
+
+output "instance_info" {  
+    value = aws_instance.master_node.*.private_ip
+}
