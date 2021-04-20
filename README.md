@@ -8,14 +8,10 @@ You will need access to your own AWS account.  AWS has some free offerings that 
 
 ## Table of content and resources
 
-* [Workshop On YouTube](YOUTUBE LINK HERE)
-* [Presentation](PDF OF SLIDES HERE)
-* [Discord chat](DISCORD LINK HERE)
-
 | Title  | Description
 |---|---|
 | **1 - Installation and configuration** | [Instructions](#Installation-and-configuration)  |
-| **2 - Part 2** | [Instructions](#Part-2)  |
+| **2 - Running the scripts** | [Instructions](#Running-the-scripts)  |
 | **3 - Resources** | [Instructions](#Resources)  |
 
 ## 1. Installation and configuration
@@ -94,7 +90,7 @@ ssh-keygen -t rsa -f ./id_rsa
 
 <img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
-## 2. Part 2
+## 2. Running the scripts
 
 **✅ Step 2a: Look in the output.tf** 
 
