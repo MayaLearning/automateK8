@@ -31,18 +31,22 @@ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 ```
 
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+
 Now that we have added the correct repo we can run the installation.
 
 ```bash
 sudo apt-get update && sudo apt-get install terraform
 ```
 
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+
 To verify the installation we can run the following command
 
 ```bash 
 terraform -help
 ```
-
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
 **✅ Step 1b: Ansible setup.** 
 
@@ -55,6 +59,7 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ```
 
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
 **✅ Step 1c: AWS setup.** 
 
@@ -72,41 +77,53 @@ Once we have the CLI we will need to setup a number of values to allow us to acc
 aws configure
 ```
 
+Following the prompts on this command will produce a file at ~/.aws/ named credentials.  An example file has been included in the repo if you want to take a look.
+
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+
 Lasly we will need to go into the AWS market place and accept the license agreement for the image we will be using.  To do that we will need to navigate [here](https://aws.amazon.com/marketplace/pp?sku=47k9ia2igxpcce2bzo8u3kj03).
 
 
 **✅ Step 1d: ssh key setup.** 
 
+In order to have access to the boxes once they are deployed we will need to generate an ssh key pair to use. 
+
 ```bash
 ssh-keygen -t rsa -f ./id_rsa
 ```
+
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
 ## 2. Part 2
 
 **✅ Step 2a: Look in the output.tf** 
 
-Notice the Asnsible jobs triggering with the values from that are output from the Terraform job.  This is the "hook" we will use to configure everything on our deployment. 
+Open up output.tf and notice the Asnsible jobs triggering with the values from that result for the Terraform job.  This is the "hook" we will use to configure everything on our deployment. 
 
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
 **✅ Step 2b: First deployment** 
+
+On our first run of Terraform we will need to initilize everything. 
 
 ```bash 
 terraform init
 ```
 
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+
+To run the script we will use the terraform apply.
+
 ```bash 
 terraform apply
 ```
 
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+
 ## 3. Resources
 For further reading and labs go to 
-[link name](URL) 
+[Github](https://github.com/MayaLearning) 
 
+[Discord](https://discord.gg/kkDTVQwJSN) 
 
-*📃output*
-```bash
-Output from the above command     
-```
-
-Screenshot of the above working
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+[YouTube](https://www.youtube.com/channel/UCesdrOv6jbT8WyShLgAjoIw) 
