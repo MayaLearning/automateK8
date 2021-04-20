@@ -68,6 +68,8 @@ sudo ./aws/install
 
 Once we have the CLI we will need to setup a number of values to allow us to access our AWS account from the tools.  We will use the configure command to start this process
 
+To get the creds used in the configure command Follow [this link](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html)
+
 ```bash
 aws configure
 ```
