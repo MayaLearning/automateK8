@@ -121,7 +121,8 @@ terraform apply
 <img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
 ## 3. Resources
-For further reading and labs go to 
+For further reading and labs go to: 
+
 [Github](https://github.com/MayaLearning) 
 
 [Discord](https://discord.gg/kkDTVQwJSN) 
