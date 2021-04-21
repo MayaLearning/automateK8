@@ -7,7 +7,7 @@ variable "setup_name" {
 variable "location" {
   type = string
   description = "AWS Region name for the setup"
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "k8s_installer" {
