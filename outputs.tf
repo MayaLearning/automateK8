@@ -30,5 +30,5 @@ resource "local_file" "ssh_conf" {
 }
 
 output "instance_info" {  
-    value = aws_instance.master_node.*.private_ip
+    value = aws_instance.master_node.0.public_ip
 }
