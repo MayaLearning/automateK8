@@ -32,7 +32,7 @@ Click in the `Terminal` menu from the top of the page and select new terminal as
 
 Description of the first section what we are going to try and do.
 
-**✅ Step 1a: Terraform Setup.** 
+**✅ Step 2a: Terraform Setup.** 
 
 In Linux we can simply add the hashicorp repositories so we can use our package manager to do the installation for us.  Offical docs can be found [here](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
 
@@ -41,7 +41,7 @@ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 ```
 
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+<img src="https://user-images.githubusercontent.com/1936716/115484364-50983800-a218-11eb-8de2-fff4b8e424d1.PNG" width=“700” />
 
 Now that we have added the correct repo we can run the installation.
 
@@ -49,16 +49,16 @@ Now that we have added the correct repo we can run the installation.
 sudo apt-get update && sudo apt-get install terraform
 ```
 
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+<img src="https://user-images.githubusercontent.com/1936716/115484457-77566e80-a218-11eb-8a89-638eb4f53524.PNG" width=“700” />
 
 To verify the installation we can run the following command
 
 ```bash 
 terraform -help
 ```
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+<img src="https://user-images.githubusercontent.com/1936716/115484588-ab319400-a218-11eb-804f-7389cde3c03d.PNG" width=“700” />
 
-**✅ Step 1b: Ansible setup.** 
+**✅ Step 2b: Ansible setup.** 
 
 If you are running on a Ubuntu box you can run the following commands to install Ansible. The offical docs can be found [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#prerequisites-installing-pip).
 
@@ -71,7 +71,7 @@ sudo apt install ansible
 
 <img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
-**✅ Step 1c: AWS setup.** 
+**✅ Step 2c: AWS setup.** 
 
 For this next step we will need to install unzip
 
@@ -114,13 +114,13 @@ ssh-keygen -t rsa -f ./id_rsa
 
 ## 3. Running the scripts
 
-**✅ Step 2a: Look in the output.tf** 
+**✅ Step 3a: Look in the output.tf** 
 
 Open up output.tf and notice the Asnsible jobs triggering with the values from that result for the Terraform job.  This is the "hook" we will use to configure everything on our deployment. 
 
 <img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
-**✅ Step 2b: First deployment** 
+**✅ Step 3b: First deployment** 
 
 On our first run of Terraform we will need to initilize everything. 
 
