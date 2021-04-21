@@ -148,7 +148,9 @@ terraform apply
 
 At the prompt type "yes"
 
-If everything was done correctly you should see an ip address to connect to your instance over ssh.
+If everything was done correctly you should see something like the below output.
+
+<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
 ## 4. Resources
 For further reading and labs go to: 
