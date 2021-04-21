@@ -9,11 +9,26 @@ You will need access to your own AWS account.  AWS has some free offerings that 
 
 | Title  | Description
 |---|---|
-| **1 - Installation and configuration** | [Instructions](#1-Installation-and-configuration)  |
-| **2 - Running the scripts** | [Instructions](#2-Running-the-scripts)  |
-| **3 - Resources** | [Instructions](#3-Resources)  |
+| **1 - Getting Connected** | [Instructions](#1-Getting-Connected)  |
+| **2 - Installation and configuration** | [Instructions](#1-Installation-and-configuration)  |
+| **3 - Running the scripts** | [Instructions](#2-Running-the-scripts)  |
+| **4 - Resources** | [Instructions](#3-Resources)  |
 
-## 1. Installation and configuration
+
+## 1. Getting Connected
+**✅ Step 1a: The first step in the section.**
+
+In your browser window, navigate to the url <YOURADDRESS>:3000 where your address is the one provided by Prasson.
+  
+When you arrive at the webpage you should be greeted by something similar to this.
+<img src="https://user-images.githubusercontent.com/1936716/107884421-a23fe180-6eba-11eb-96d2-4c703ccb1dcf.png" width=“700” />
+
+Click in the `Terminal` menu from the top of the page and select new terminal as shown below
+<img src="https://user-images.githubusercontent.com/1936716/107884506-09f62c80-6ebb-11eb-9f7b-42bdb3444cc1.png" width=“700” />
+
+
+
+## 2. Installation and configuration
 
 Description of the first section what we are going to try and do.
 
@@ -97,7 +112,7 @@ ssh-keygen -t rsa -f ./id_rsa
 
 <img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
-## 2. Running the scripts
+## 3. Running the scripts
 
 **✅ Step 2a: Look in the output.tf** 
 
@@ -123,7 +138,7 @@ terraform apply
 
 <img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
-## 3. Resources
+## 4. Resources
 For further reading and labs go to: 
 
 [Github](https://github.com/MayaLearning) 
