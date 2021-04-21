@@ -2,7 +2,6 @@ function start_vpn { #Start sshuttle VPN
   # List of subnets to tunnel
   VPN_SUBNETS="10.0.1.0/24 10.244.0.0/16 10.42.0.0/16 10.43.0.0/16"
   pip3 install sshuttle
-  cd ./deployments
   BASTION=$(grep -e '^bastion' inventory.ini|awk -F'ansible_host=' '{ print $NF }'|awk '{ print $1 }')
   echo "Setting up sshuttle VPN connection through $BASTION"
   ansible -m wait_for -a "timeout=300 port=22 host=$BASTION search_regex=OpenSSH" -i inventory.ini -e ansible_connection=local bastion
@@ -13,7 +12,7 @@ set -e
 pkill sshuttle || echo "sshuttle starting"
 nohup sshuttle -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no' -r ubuntu@$BASTION $VPN_SUBNETS &
 EOF
-  chmod +x $DIR/workspace/start_vpn.sh
+  chmod +x start_vpn.sh
   ./start_vpn.sh
   # Wait for all nodes to come up and become available
   ansible -m wait_for -a "timeout=300 port=22 host=$BASTION search_regex=OpenSSH" -i inventory.ini -e ansible_connection=local all
@@ -23,7 +22,7 @@ EOF
 
 start_vpn
 
-echo "Installing Kubespray
+echo "Installing Kubespray"
 
 if [ -d kubespray ]; then
   cd kubespray
