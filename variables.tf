@@ -32,7 +32,7 @@ variable "image" {
 #ssh username is default in the AMI, we will use image.user
 variable "ssh_user" {
   type = string
-  default = "user"
+  default = "ubuntu"
 }
 
 variable "ssh_private_key" {
