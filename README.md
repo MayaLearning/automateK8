@@ -60,7 +60,7 @@ terraform -help
 
 **✅ Step 2b: Ansible setup.** 
 
-If you are running on a Ubuntu box you can run the following commands to install Ansible. The offical docs can be found [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#prerequisites-installing-pip).
+If you are running on a Ubuntu box you can run the following commands to install Ansible. The offical docs can be found [here](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#prerequisites-installing-pip).  When prompted make sure to enter a capital Y to confirm that you would like to install ansible.
 
 ```bash
 sudo apt update
@@ -69,7 +69,13 @@ sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ```
 
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+Ommited output for the above as we will verify the install 
+
+```bash
+ansible --help
+```
+
+<img src="https://user-images.githubusercontent.com/1936716/115484920-475b9b00-a219-11eb-8ff0-09e8679e97cc.PNG" width=“700” />
 
 **✅ Step 2c: AWS setup.** 
 
@@ -79,6 +85,8 @@ For this next step we will need to install unzip
 sudo apt install unzip
 ```
 
+<img src="https://user-images.githubusercontent.com/1936716/115484997-740fb280-a219-11eb-8d44-3fc8fcdbc2aa.PNG" width=“700” />
+
 Lastly we will install and configure the AWS CLI
 
 ```bash
@@ -86,6 +94,14 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 ```
+
+Output ommited as we can verify the install worked with the following 
+
+```bash
+/usr/local/bin/aws --version
+```
+
+<img src="https://user-images.githubusercontent.com/1936716/115485131-b46f3080-a219-11eb-8d4f-6054b0dc6382.PNG" width=“700” />
 
 Once we have the CLI we will need to setup a number of values to allow us to access our AWS account from the tools.  We will use the configure command to start this process
 
@@ -97,10 +113,6 @@ aws configure
 
 Following the prompts on this command will produce a file at ~/.aws/ named credentials.  An example file has been included in the repo if you want to take a look.
 
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
-
-Lasly we will need to go into the AWS market place and accept the license agreement for the image we will be using.  To do that we will need to navigate [here](https://aws.amazon.com/marketplace/pp?sku=47k9ia2igxpcce2bzo8u3kj03).
-
 
 **✅ Step 1d: ssh key setup.** 
 
@@ -110,15 +122,13 @@ In order to have access to the boxes once they are deployed we will need to gene
 ssh-keygen -t rsa -f ./id_rsa
 ```
 
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+<img src="https://user-images.githubusercontent.com/1936716/115485287-057f2480-a21a-11eb-948e-c03ba32c4c89.PNG" width=“700” />
 
 ## 3. Running the scripts
 
 **✅ Step 3a: Look in the output.tf** 
 
 Open up output.tf and notice the Asnsible jobs triggering with the values from that result for the Terraform job.  This is the "hook" we will use to configure everything on our deployment. 
-
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
 **✅ Step 3b: First deployment** 
 
@@ -128,7 +138,7 @@ On our first run of Terraform we will need to initilize everything.
 terraform init
 ```
 
-<img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
+<img src="https://user-images.githubusercontent.com/1936716/115485375-33646900-a21a-11eb-9f61-e1ef3fd85ccb.PNG" width=“700” />
 
 To run the script we will use the terraform apply.
 
