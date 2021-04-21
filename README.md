@@ -146,6 +146,10 @@ To run the script we will use the terraform apply.
 terraform apply
 ```
 
+At the prompt type "yes"
+
+If everything was done correctly you should see something like the below output.
+
 <img src="https://user-images.githubusercontent.com/blah/blahblah.png" width=“700” />
 
 ## 4. Resources
